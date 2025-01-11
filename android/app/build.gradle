@@ -1,4 +1,18 @@
-pn = flutter.ndkVersion
+flutter {
+    source = "../.."
+}
+
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.routine_tracker"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion  // Corrected line to assign ndkVersion properly
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -22,23 +36,9 @@ pn = flutter.ndkVersion
 
     buildTypes {
         release {
-            // TODO: Add your own signing config fssssor the release build.
+            // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.debug
         }
     }
-}
-
-flutter {
-    source = "../.."lugins {
-    id "com.android.application"
-    id "kotlin-android"
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
-    id "dev.flutter.flutter-gradle-plugin"
-}
-
-android {
-    namespace = "com.example.routine_tracker"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersio
 }
