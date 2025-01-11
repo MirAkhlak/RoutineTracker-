@@ -4,11 +4,19 @@ flutter {
 }
 
 plugins {
-    id "com.android.application"
-    id "kotlin-android"
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
-    id "dev.flutter.flutter-gradle-plugin"
+    id 'com.android.application' // or the appropriate plugin for your project
+    id 'kotlin-android'           // If you're using Kotlin, for example
 }
+
+android {
+    compileSdkVersion 33 // Example version, adjust as necessary
+    // Other android configurations
+}
+
+dependencies {
+    // Your dependencies here
+}
+
 
 android {
     namespace = "com.example.routine_tracker"
